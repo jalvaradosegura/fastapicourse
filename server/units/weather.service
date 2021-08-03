@@ -3,7 +3,7 @@ Description=gunicorn uvicorn service for Weather Service API
 After=syslog.target
 
 [Service]
-execstart=/apps/app_repo/venv/bin/gunicorn -b 127.0.0.1:8000 main:api --name weather_svc --chdir /apps/app_repo --access-logfile /apps/logs/weather_api/access.log --error-logfile /apps/logs/weather_api/errors.log --user apiuser
+ExecStart=/apps/app_repo/venv/bin/gunicorn -b 127.0.0.1:8000 main:api --name weather_svc --chdir /apps/app_repo --access-logfile /apps/logs/weather_api/access.log --error-logfile /apps/logs/weather_api/errors.log --user apiuser
 
 # this one was working /apps/app_repo/venv/bin/gunicorn -b 127.0.0.1:8000 main:api --name weather_svc --chdir /apps/app_repo --access-logfile /apps/logs/weather_api/access.log --error-logfile /apps/logs/weather_api/errors.log --user apiuser
 
