@@ -47,6 +47,7 @@ pip install --upgrade gunicorn uvloop httptools
 # clone the repo:
 cd /apps
 git clone https://github.com/talkpython/modern-apis-with-fastapi app_repo
+git clone https://github.com/jalvaradosegura/fastapicourse.git app_repo
 
 # Setup the web app:
 cd /apps/app_repo/ch08-deployment
